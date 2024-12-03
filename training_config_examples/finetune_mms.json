@@ -19,7 +19,7 @@
     "max_tokens_length": 750,
   
 
-    "model_name_or_path": "facebook/mms-tts-ara",
+    "model_name_or_path": "AhmedBadawy11/mms-tts-uae-checkpoint",
 
 
     "preprocessing_num_workers": 4,
