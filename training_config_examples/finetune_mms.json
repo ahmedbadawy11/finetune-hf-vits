@@ -1,18 +1,19 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-large",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
     "output_dir": "./tmp/mms_finetuned_uae",
 
-    "dataset_name": "rahafvii/UEA100",    
+    "dataset_name": "AhmedBadawy11/UAE18000",    
     "audio_column_name": "audio", 
     "text_column_name":"text",
     "train_split_name": "train",
-    "eval_split_name": "train",
+    "eval_split_name": "validation",
   
 
+    "full_generation_sample_text": "يقول ستيفن كوفي في الواقع لا يرى الناس العالم كما هو بل يرونه كما يعتقدونهم أو كما اعتادوا عليه",
     
     "max_duration_in_seconds": 25,
     "min_duration_in_seconds": 1.0,
@@ -25,7 +26,7 @@
     "preprocessing_num_workers": 4,
 
     "do_train": true,
-    "num_train_epochs": 70,
+    "num_train_epochs": 50,
     "gradient_accumulation_steps": 1,
     "gradient_checkpointing": false,
     "per_device_train_batch_size": 16,
