@@ -1,19 +1,19 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-large",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-large-100h",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
     "output_dir": "./tmp/mms_finetuned_uae",
 
-    "dataset_name": "AhmedBadawy11/UAE18000",    
+    "dataset_name": "AhmedBadawy11/UAE_100K",    
     "audio_column_name": "audio", 
     "text_column_name":"text",
     "train_split_name": "train",
     "eval_split_name": "validation",
   
 
-    "full_generation_sample_text": "يقول ستيفن كوفي في الواقع لا يرى الناس العالم كما هو بل يرونه كما يعتقدونهم أو كما اعتادوا عليه",
+    "full_generation_sample_text": "فالمطبخ اللي في السفينة فهو اللي عطاني المعلومة أن كان عدد الطاقم تسعمية",
     
     "max_duration_in_seconds": 25,
     "min_duration_in_seconds": 1.0,
@@ -26,10 +26,10 @@
     "preprocessing_num_workers": 4,
 
     "do_train": true,
-    "num_train_epochs": 50,
+    "num_train_epochs": 100,
     "gradient_accumulation_steps": 1,
     "gradient_checkpointing": false,
-    "per_device_train_batch_size": 16,
+    "per_device_train_batch_size": 32,
     "learning_rate": 2e-5,
     "adam_beta1": 0.8,
     "adam_beta2": 0.99,
@@ -38,7 +38,7 @@
 
     "do_eval": true, 
     "eval_steps": 50,
-    "per_device_eval_batch_size": 16,
+    "per_device_eval_batch_size": 32,
     "max_eval_samples": 25, 
     "do_step_schedule_per_epoch": true,
 
