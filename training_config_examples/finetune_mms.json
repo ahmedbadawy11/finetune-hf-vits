@@ -20,7 +20,7 @@
     "max_tokens_length": 750,
   
 
-    "model_name_or_path": "AhmedBadawy11/mms-tts-uae-train-large-100h",
+    "model_name_or_path": "AhmedBadawy11/mms-tts-uae-train",
 
 
     "preprocessing_num_workers": 4,
@@ -29,7 +29,7 @@
     "num_train_epochs": 100,
     "gradient_accumulation_steps": 1,
     "gradient_checkpointing": false,
-    "per_device_train_batch_size": 32,
+    "per_device_train_batch_size": 16,
     "learning_rate": 2e-5,
     "adam_beta1": 0.8,
     "adam_beta2": 0.99,
@@ -38,7 +38,7 @@
 
     "do_eval": true, 
     "eval_steps": 50,
-    "per_device_eval_batch_size": 32,
+    "per_device_eval_batch_size": 16,
     "max_eval_samples": 25, 
     "do_step_schedule_per_epoch": true,
 
