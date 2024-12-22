@@ -1,7 +1,7 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-large-100h",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-100h",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
     "output_dir": "./tmp/mms_finetuned_uae",
@@ -20,7 +20,7 @@
     "max_tokens_length": 750,
   
 
-    "model_name_or_path": "AhmedBadawy11/mms-tts-uae-checkpoint",
+    "model_name_or_path": "AhmedBadawy11/mms-tts-uae-train-large-100h",
 
 
     "preprocessing_num_workers": 4,

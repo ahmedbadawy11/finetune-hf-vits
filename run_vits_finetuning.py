@@ -1247,6 +1247,21 @@ def main():
                         save_path = os.path.join(training_args.output_dir, f"checkpoint-{global_step}")
                         accelerator.save_state(save_path)
                         logger.info(f"Saved state to {save_path}")
+                         # i added this 
+            
+                        # Push to Hub every 10 epochs
+                        if epoch % 10 == 0:
+                            logger.info(f"Pushing model to Hub at epoch {epoch}...")
+                            # model = accelerator.unwrap_model(model)
+                            # model.save_pretrained(training_args.output_dir)
+
+                            if training_args.push_to_hub:
+                                VitsModel.from_pretrained(save_path).push_to_hub(training_args.hub_model_id)
+                                feature_extractor.push_to_hub(training_args.hub_model_id)
+                                tokenizer.push_to_hub(training_args.hub_model_id)
+                                logger.info("Model pushed to Hub.")
+
+
 
             logs = {
                 "step_loss": total_generator_loss.detach().item(),
@@ -1362,19 +1377,19 @@ def main():
 
                 accelerator.wait_for_everyone()
 
-        # i added this 
+        # # i added this 
             
-        # Push to Hub every 10 epochs
-        if epoch % 10 == 0:
-            logger.info(f"Pushing model to Hub at epoch {epoch}...")
-            model = accelerator.unwrap_model(model)
-            model.save_pretrained(training_args.output_dir)
+        # # Push to Hub every 10 epochs
+        # if epoch % 10 == 0:
+        #     logger.info(f"Pushing model to Hub at epoch {epoch}...")
+        #     model = accelerator.unwrap_model(model)
+        #     model.save_pretrained(training_args.output_dir)
 
-            if training_args.push_to_hub:
-                VitsModel.from_pretrained(training_args.output_dir).push_to_hub(training_args.hub_model_id)
-                feature_extractor.push_to_hub(training_args.hub_model_id)
-                tokenizer.push_to_hub(training_args.hub_model_id)
-                logger.info("Model pushed to Hub.")
+        #     if training_args.push_to_hub:
+        #         VitsModel.from_pretrained(training_args.output_dir).push_to_hub(training_args.hub_model_id)
+        #         feature_extractor.push_to_hub(training_args.hub_model_id)
+        #         tokenizer.push_to_hub(training_args.hub_model_id)
+        #         logger.info("Model pushed to Hub.")
 
 
 
