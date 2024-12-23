@@ -1250,7 +1250,7 @@ def main():
                          # i added this 
             
                         # Push to Hub every 10 epochs
-                        if epoch % 10 == 0:
+                        if epoch % 5 == 0:
                             logger.info(f"Pushing model to Hub at epoch {epoch}...")
                             model = accelerator.unwrap_model(model)
                             model.save_pretrained(training_args.output_dir)
