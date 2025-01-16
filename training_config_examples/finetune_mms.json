@@ -1,10 +1,10 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-manually-annotate-data",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-manually-annotate-data-200",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
-    "output_dir": "./tmp/mms_finetuned_uae",
+    "output_dir": "./tmp/mms_finetuned_uae_200",
 
     "dataset_name": "AhmedBadawy11/high_quality_ds",    
     "audio_column_name": "audio", 
@@ -13,11 +13,12 @@
     "eval_split_name": "train",
   
 
-    "full_generation_sample_text": "استخدم كلمات كثيرة في السنوات الأخيرة وطورناها علشان تتناسب مع الحياة يعني مثلاً كلمة جوال",
+    "full_generation_sample_text": "أولاً يعتبرون أنفسهم جيدين ورغم أن الأمر بسيط لكنه على قدر عالي من الأهمية",
     
-    "max_duration_in_seconds": 25,
+    "max_duration_in_seconds": 20,
     "min_duration_in_seconds": 1.0,
-    "max_tokens_length": 750,
+    "max_tokens_length": 500,
+
   
 
     "model_name_or_path": "AhmedBadawy11/mms-tts-uae-checkpoint",
@@ -26,7 +27,7 @@
     "preprocessing_num_workers": 4,
 
     "do_train": true,
-    "num_train_epochs": 100,
+    "num_train_epochs": 200,
     "gradient_accumulation_steps": 1,
     "gradient_checkpointing": false,
     "per_device_train_batch_size": 16,
