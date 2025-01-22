@@ -1,19 +1,19 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-2000-manually-annotate-data",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-New-1000-manually-annotate-data",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
-    "output_dir": "./tmp/mms_finetuned_uae_2000",
+    "output_dir": "./tmp/mms_finetuned_uae_1000",
 
-    "dataset_name": "AhmedBadawy11/high_quality_ds_2000",    
+    "dataset_name": "AhmedBadawy11/high_quality_ds_New_1000",    
     "audio_column_name": "audio", 
     "text_column_name":"text",
     "train_split_name": "train",
-    "eval_split_name": "validation",
+    "eval_split_name": "train",
   
 
-    "full_generation_sample_text": "تنتهي كل خلايا جسمك القديمة وتظهر خلايا جديدة يعني أنت صرت نسخة جديدة من نفسك لكن",
+    "full_generation_sample_text": "إنك لما تعلن أمام الآخرين التزامك بموعد نهائي فأنت وضعت سمعتك أمام اختبار",
     
     "max_duration_in_seconds": 20,
     "min_duration_in_seconds": 1.0,
