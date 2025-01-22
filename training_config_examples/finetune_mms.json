@@ -1,19 +1,19 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-manually-annotate-data-200",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-2000-manually-annotate-data",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
-    "output_dir": "./tmp/mms_finetuned_uae_200",
+    "output_dir": "./tmp/mms_finetuned_uae_2000",
 
-    "dataset_name": "AhmedBadawy11/high_quality_ds",    
+    "dataset_name": "AhmedBadawy11/high_quality_ds_2000",    
     "audio_column_name": "audio", 
     "text_column_name":"text",
     "train_split_name": "train",
-    "eval_split_name": "train",
+    "eval_split_name": "validation",
   
 
-    "full_generation_sample_text": "أولاً يعتبرون أنفسهم جيدين ورغم أن الأمر بسيط لكنه على قدر عالي من الأهمية",
+    "full_generation_sample_text": "تنتهي كل خلايا جسمك القديمة وتظهر خلايا جديدة يعني أنت صرت نسخة جديدة من نفسك لكن",
     
     "max_duration_in_seconds": 20,
     "min_duration_in_seconds": 1.0,
