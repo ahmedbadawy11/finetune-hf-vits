@@ -1,19 +1,19 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-New-1000-manually-annotate-data",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-50K-data-seamless-10-epochs",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
-    "output_dir": "./tmp/mms_finetuned_uae_1000",
+    "output_dir": "./tmp/mms_finetuned_uae_50K",
 
-    "dataset_name": "AhmedBadawy11/high_quality_ds_New_1000",    
+    "dataset_name": "AhmedBadawy11/seamless_transcription_100H_ds",    
     "audio_column_name": "audio", 
     "text_column_name":"text",
     "train_split_name": "train",
-    "eval_split_name": "train",
+    "eval_split_name": "validation",
   
 
-    "full_generation_sample_text": "إنك لما تعلن أمام الآخرين التزامك بموعد نهائي فأنت وضعت سمعتك أمام اختبار",
+    "full_generation_sample_text": "هو بعد قيامك بخدمة لأي إنسان مهما كانت بسيطة حتى لو كانت تسهيل معاملة مراجعة في العمل",
     
     "max_duration_in_seconds": 20,
     "min_duration_in_seconds": 1.0,
@@ -27,7 +27,7 @@
     "preprocessing_num_workers": 4,
 
     "do_train": true,
-    "num_train_epochs": 200,
+    "num_train_epochs": 10,
     "gradient_accumulation_steps": 1,
     "gradient_checkpointing": false,
     "per_device_train_batch_size": 16,
