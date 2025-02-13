@@ -1,19 +1,19 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-31K-data-seamless-No_Noise_muultispeaker_mp3",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-31K-data-seamless-No_Noise_muultispeaker_mp3-20-epochs",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
     "output_dir": "./tmp/mms_finetuned_uae_31K",
 
-    "dataset_name": "AhmedBadawy11/No_Noise_muultispeaker_pauses_mp3",    
+    "dataset_name": "AhmedBadawy11/No_Noise_muultispeaker_mp3",    
     "audio_column_name": "audio", 
     "text_column_name":"text",
     "train_split_name": "train",
     "eval_split_name": "validation",
   
 
-    "full_generation_sample_text": "حكايات القرون الوسطى كانت توصف بالرومانسية لأنها كانت تكتب باللغة اللاتينية وهي لغة أهل روما القديمة أو الرومان",
+    "full_generation_sample_text":"ما في المعجزات فأقرّت الكنيسة قطع لسانه حياً وحرقه على الوتد",
     
     "max_duration_in_seconds": 20.0,
     "min_duration_in_seconds": 3.0,
