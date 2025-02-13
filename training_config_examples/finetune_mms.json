@@ -1,19 +1,19 @@
 {
     "project_name": "mms_UAE_finetuning",
     "push_to_hub": true,
-    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-7K-data-seamless-Cleaned_data",
+    "hub_model_id": "AhmedBadawy11/mms-tts-uae-train-31K-data-seamless-No_Noise_muultispeaker_mp3",
     "report_to": ["wandb"],
     "overwrite_output_dir": true,
-    "output_dir": "./tmp/mms_finetuned_uae_7K",
+    "output_dir": "./tmp/mms_finetuned_uae_31K",
 
-    "dataset_name": "AhmedBadawy11/seamless_transcription_Cleaned_data_Rate_16000",    
+    "dataset_name": "AhmedBadawy11/No_Noise_muultispeaker_pauses_mp3",    
     "audio_column_name": "audio", 
     "text_column_name":"text",
     "train_split_name": "train",
     "eval_split_name": "validation",
   
 
-    "full_generation_sample_text": "في رحلة إلى أوروبا عشان يشوف محلات التسوق ويتعلم أساليب البيزنس عندهم ويرجع باللي تعلمه لمدينة شيكاغو",
+    "full_generation_sample_text": "حكايات القرون الوسطى كانت توصف بالرومانسية لأنها كانت تكتب باللغة اللاتينية وهي لغة أهل روما القديمة أو الرومان",
     
     "max_duration_in_seconds": 20.0,
     "min_duration_in_seconds": 3.0,
@@ -21,13 +21,13 @@
 
   
 
-    "model_name_or_path": "facebook/mms-tts-ara",
+    "model_name_or_path": "AhmedBadawy11/mms-tts-uae-checkpoint",
 
 
-    "preprocessing_num_workers": 4,
+    "preprocessing_num_workers": 8,
 
     "do_train": true,
-    "num_train_epochs": 100,
+    "num_train_epochs": 20,
     "gradient_accumulation_steps": 1,
     "gradient_checkpointing": false,
     "per_device_train_batch_size": 16,
